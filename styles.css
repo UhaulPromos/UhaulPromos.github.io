@@ -1,0 +1,134 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #e0e0e0; /* Light Gray */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2ecc71; /* Vibrant Green */
+}
+
+/* Light Mode */
+body.light-mode {
+    background: #e0e0e0;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: #f1c40f; /* Vibrant Yellow */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2ecc71;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+}
+
+#mode-toggle {
+    font-family: 'Lato', sans-serif;
+    padding: 0.5rem 1rem;
+    background: #f1c40f; /* Yellow */
+    border: none;
+    cursor: pointer;
+}
+
+/* Main Layout */
+main {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Featured Post */
+.featured-post {
+    grid-column: 1 / -1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+/* Post Grid */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.post-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .post-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .post-grid {
+        grid-template-columns: 1fr;
+    }
+}
