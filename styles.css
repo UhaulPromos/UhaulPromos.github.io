@@ -98,26 +98,6 @@ body.dark-mode .post-card, body.dark-mode .sidebar {
     transition: all 0.3s;
 }
 
-.subscribe-btn {
-    position: absolute;
-    right: 2rem;
-    top: 1.5rem;
-    padding: 0.5rem 1rem;
-    background: #ff6200; /* Orange */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.subscribe-btn:hover {
-    background: #e55a00;
-}
-
 /* Main Layout */
 main {
     padding: 2rem 5%;
@@ -129,14 +109,14 @@ main {
 /* Content Wrapper (Post Grid + Sidebar) */
 .content-wrapper {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2rem;
 }
 
 /* Post Grid */
 .post-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Changed to 3 columns */
     gap: 2rem;
 }
 
@@ -144,6 +124,13 @@ main {
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 1.5rem;
     margin-bottom: 1.5rem;
+}
+
+.post-card img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio (1200x720 = 5:3) */
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .post-label {
@@ -252,6 +239,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .post-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+    }
+
     .sidebar {
         margin-top: 2rem;
     }
@@ -291,10 +282,5 @@ footer {
 
     .nav-links.active {
         display: flex;
-    }
-
-    .subscribe-btn {
-        top: 1rem;
-        right: 1rem;
     }
 }
