@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;300&family=Lato:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-mode">
     <!-- Pinned Navigation Bar -->
     <header class="navbar">
         <div class="logo">UhaulPromos</div>
@@ -33,7 +33,7 @@
 
         <!-- Category Filters -->
         <div class="category-filters">
-            <button>All</button>
+            <button class="active">All</button>
             <button>Moving Guides</button>
             <button>Packing Tips</button>
             <button>U-Haul Hacks</button>
@@ -41,13 +41,19 @@
 
         <!-- Post Grid -->
         <section class="post-grid">
-            <!-- Sample Post (repeat 16x for desktop) -->
+            <!-- 16 Posts for Desktop -->
             <article class="post-card">
                 <img src="assets/sample-thumb.jpg" alt="Post Thumbnail">
                 <h2>Top 5 U-Haul Rental Tips</h2>
                 <p>Save time and money with these expert tips.</p>
             </article>
-            <!-- Add more posts here -->
+            <!-- Repeat for 15 more posts -->
+            <article class="post-card">
+                <img src="assets/sample-thumb.jpg" alt="Post Thumbnail">
+                <h2>Choosing the Right U-Haul Truck Size</h2>
+                <p>Find the perfect truck for your move.</p>
+            </article>
+            <!-- Add 14 more placeholders (shortened for brevity) -->
         </section>
 
         <!-- Sidebar -->
@@ -58,7 +64,6 @@
                 <li><a href="#">Post Title 2</a></li>
                 <li><a href="#">Post Title 3</a></li>
             </ul>
-            <!-- AdSense placeholder -->
             <div class="adsense-slot">AdSense Ad Here</div>
         </aside>
 
@@ -73,14 +78,14 @@
         <!-- Pagination -->
         <div class="pagination">
             <a href="#">Previous</a>
-            <a href="#">1</a>
+            <a href="#" class="active">1</a>
             <a href="#">2</a>
             <a href="#">Next</a>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 UhaulPromos</p>
+        <p>© 2025 UhaulPromos</p>
     </footer>
 
     <script src="script.js"></script>
