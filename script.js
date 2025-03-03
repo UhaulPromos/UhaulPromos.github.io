@@ -1,13 +1,7 @@
-document.getElementById('mode-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    document.body.classList.toggle('light-mode');
-    localStorage.setItem('mode', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-});
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-// Load saved mode
-const savedMode = localStorage.getItem('mode');
-if (savedMode === 'dark') {
-    document.body.classList.add('dark-mode');
-} else {
-    document.body.classList.add('light-mode');
-}
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
